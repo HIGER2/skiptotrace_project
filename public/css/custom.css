@@ -1,0 +1,50 @@
+.login-image .fa-user-circle {
+    font-size: 35px;
+    color: #ffffff;
+}
+
+.form_singleskip .form-group {
+    float: left;
+    margin-left: 15px;
+    width:30%;
+}
+
+.error_div,.has-error{
+  color: red;
+}
+
+.error_title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.status_msg{
+   color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+.hide{
+  display: none;
+}
+select.form-control.card-expiry-year {
+    width: 25%;
+}
+.callout a:hover{
+    color:#007bff !important;
+}
+
+.csv_format_p{
+  background-color: #cccccc;
+    width: 50%;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#contact_form .error, #changePassword_form .error {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+#contact_form .text-danger, #changePassword_form .text-danger {
+    color: #ffffff!important;
+}

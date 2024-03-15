@@ -1,0 +1,54 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:500|Poppins:400');
+@import url('./layout.scss');
+@import url('./home.scss');
+@import url('./dashboard.scss');
+@import url('./skipSingle.scss');
+@import url('./bulkSingle.scss');
+@import url('./billing.scss');
+@import url('./addcredit.scss');
+@import url('./managecard.scss');
+@import url('./addCard.scss');
+@import url('./bulkList.scss');
+*,::before,::after{
+
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+
+body{
+    &.no-scroll{
+      overflow: hidden;
+    }
+}
+body {
+  font-family: 'Poppins';
+//   font-weight: 400;
+//   font-family: Open Sauce Sans, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+h1, h2, h3, h4, h5 {
+  // font-family: 'undefined';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}

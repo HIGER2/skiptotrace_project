@@ -23,36 +23,76 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// Route::middleware('auth')->group(function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/singleSkip', [SingleSkipController::class, 'index'])->name('singleSkip');
-    Route::post('/singleSkip', [SingleSkipController::class, 'store']);
-    Route::get('/skipList', [SkipListController::class, 'index'])->name('skipList');
-    Route::post('/skipList', [SkipListController::class, 'import'])->name('skipList');
-    Route::get('/csvList', [MyListController::class, 'index'])->name('csvList');
-    Route::get('/myList/{id}', [MyListController::class, 'mylist_csv'])->name('myList');
-    Route::get('/addCard', [StripePaymentController::class, 'addCard'])->name('addCard');
-    Route::post('/addCard', [StripePaymentController::class, 'addCardPost'])->name('addCardPost');
-    Route::get('/billing_history', [StripePaymentController::class, 'billing_history'])->name('billing_history');
-    Route::get('/manage_cards', [StripePaymentController::class, 'manage_cards'])->name('manage_cards');
-    Route::post('/deleteCard', [StripePaymentController::class, 'deleteCard']);
-    Route::post('/editCard', [StripePaymentController::class, 'editCard']);
-    Route::get('/add_credits', [StripePaymentController::class, 'buy_skips'])->name('add_credits');
-    Route::post('/add_credits', [StripePaymentController::class, 'buy_skips_Post'])->name('buy_skips');
-    Route::get('/change_password', [SettingsController::class, 'index'])->name('change_password');
-    Route::post('/change_password', [SettingsController::class, 'change_password_post']);
-    Route::get('/contact', [SettingsController::class, 'contact']);
-    Route::post('/contact', [SettingsController::class, 'store'])->name('contact');
-    Route::get('/send-mail', [MailController::class, 'index']);
+//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+//     Route::get('/singleSkip', [SingleSkipController::class, 'index'])->name('singleSkip');
+//     Route::post('/singleSkip', [SingleSkipController::class, 'store']);
+//     Route::get('/skipList', [SkipListController::class, 'index'])->name('skipList');
+//     Route::post('/skipList', [SkipListController::class, 'import'])->name('skipList');
+//     Route::get('/csvList', [MyListController::class, 'index'])->name('csvList');
+//     Route::get('/myList/{id}', [MyListController::class, 'mylist_csv'])->name('myList');
+//     Route::get('/addCard', [StripePaymentController::class, 'addCard'])->name('addCard');
+//     Route::post('/addCard', [StripePaymentController::class, 'addCardPost'])->name('addCardPost');
+//     Route::get('/billing_history', [StripePaymentController::class, 'billing_history'])->name('billing_history');
+//     Route::get('/manage_cards', [StripePaymentController::class, 'manage_cards'])->name('manage_cards');
+//     Route::post('/deleteCard', [StripePaymentController::class, 'deleteCard']);
+//     Route::post('/editCard', [StripePaymentController::class, 'editCard']);
+//     Route::get('/add_credits', [StripePaymentController::class, 'buy_skips'])->name('add_credits');
+//     Route::post('/add_credits', [StripePaymentController::class, 'buy_skips_Post'])->name('buy_skips');
+//     Route::get('/change_password', [SettingsController::class, 'index'])->name('change_password');
+//     Route::post('/change_password', [SettingsController::class, 'change_password_post']);
+//     Route::get('/contact', [SettingsController::class, 'contact']);
+//     Route::post('/contact', [SettingsController::class, 'store'])->name('contact');
+//     Route::get('/send-mail', [MailController::class, 'index']);
+// });
 
+
+Route::get('/dashboard', function () {
+    return view('pages.dashboard');
 });
 
-require __DIR__.'/auth.php';
+
+Route::get('/singleSkip', function () {
+    return view('pages.singleSkip');
+});
+
+
+Route::get('/bulkSkip', function () {
+    return view('pages.bulkSkip');
+});
+
+
+Route::get('/bulkSkip_list', function () {
+    return view('pages.bulkSkipList');
+});
+
+
+Route::get('/billing', function () {
+    return view('pages.billing');
+});
+
+
+Route::get('/add_credits', function () {
+    return view('pages.addCedit');
+});
+
+
+Route::get('/manage_cards', function () {
+    return view('pages.manageCard');
+});
+
+Route::get('/add_card', function () {
+    return view('pages.addCard');
+});
+
+
+// Route::group()
+require __DIR__ . '/auth.php';

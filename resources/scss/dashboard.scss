@@ -1,0 +1,190 @@
+@import './variable.scss';
+
+.Dasboard{
+    width: 100%;
+    padding: 1em;
+    .box-Content{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0, 1fr));
+        background-color: $white;
+        border-radius: 0.5em;
+        min-height: 100px;
+        padding: 0.5em;
+        .box{
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+            gap: 10px;
+            border-right: 2px solid $treeth;
+            &:last-child{
+                border: none;
+            }
+            &:nth-child(1){
+                .ico{
+                    background-color: rgb(0, 0, 255,0.2);
+                    color: blue;
+                }
+
+                .value{
+                    color: blue;
+                }
+            }
+            &:nth-child(2){
+                .ico{
+                    background-color: rgb(255, 69, 0,0.1);
+                    color: #ff4500;
+                }
+                .value{
+                    color: #ff4500;
+                 }
+            }
+            &:nth-child(3){
+                .ico{
+                    background-color: rgba(202, 247, 243, 0.4);
+                    color: #1ab6dd;
+                }
+                .value{
+                    color: #1ab6dd;
+                 }
+            }
+              &:nth-child(4){
+                .ico{
+                    background-color:rgba(33, 6, 83,0.2);
+                    color: #210653;
+                }
+                .value{
+                    color: #210653;
+                 }
+            }
+            .ico{
+                width: 40px;
+                height: 40px;
+                background-color: $accent;
+                color: $white;
+                border-radius: 0.6em;
+                line-height: 40px;
+                text-align: center;
+                i{
+                    font-size: 1em;
+                }
+            }
+            .info{
+                display: flex;
+                flex-direction: column;
+                color:$accent;
+                .libele{
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    font-size: 0.8em;
+                }
+
+                .value{
+                    font-weight: 600;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+
+    .contentTable{
+        width: 100%;
+        min-height: 80px;
+        background-color: $white;
+        margin-top: 1em;
+        padding: 1em;
+        border-radius: 0.5em;
+          h5 {
+            margin-bottom: 1em;
+            font-size: 1em;
+        }
+
+       table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            tbody {
+                tr {
+                    cursor: pointer;
+                    border-bottom: 1px solid $gray;
+                    width: 100%;
+
+                    &:hover {
+                        // background: $light_second;
+                    }
+
+                    td {
+                        padding: 16px 10px;
+                        font-size: 14px;
+                        text-transform: lowercase;
+                        text-align: left;
+                        // color: $second_gray;
+                        font-weight: 300;
+                        width: max-content;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        text-wrap: nowrap;
+                        width:calc(100% / 7);
+
+                        &.action{
+                            display:inline-flex;
+                            align-items: center;
+                            gap: 10px;
+                            width: 100%;
+                            // width: max-content;
+                            span{
+                                 a{
+                                    color: $white;
+                                 }
+                                cursor: pointer;
+                                padding: 5px;
+                                background-color: $text;
+                                color: $white;
+                                border-radius: 6px;
+                                i{
+                                    font-size: 1em;
+                                }
+                            }
+                        }
+
+                        .commande {
+                            text-decoration: underline;
+                            // color: $black;
+                        }
+
+                        i {
+                            width: 20px;
+                            height: 20px;
+                            line-height: 40px;
+                            text-align: center;
+                            border-radius: 50%;
+                            font-weight: 900;
+                            font-size: 25px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            // color: $secondary;
+                            padding: 10px;
+                        }
+
+                    }
+                }
+
+            }
+
+            thead {
+                th {
+                    padding-bottom: 20px;
+                    font-size: 12px;
+                    text-align: left;
+                    color: $text_ligth;
+                    border-bottom: 1px solid $gray;
+                    // border-bottom: 1px solid $grey;
+                }
+
+            }
+
+        }
+    }
+
+}

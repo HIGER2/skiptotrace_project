@@ -1,0 +1,221 @@
+
+@import './variable.scss';
+
+.billing {
+    width: 100%;
+    padding: 1em;
+    position: relative;
+
+    .contentTable {
+        width: 100%;
+        background-color: transparent;
+        flex-direction: column;
+        margin-top: 1em;
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        h5 {
+            margin-bottom: 2em;
+            font-size: 1em;
+        }
+        .contentImg{
+            flex-basis: 35%;
+            height: 250px;
+            background-color: $white;
+            border-radius: 10px;
+            .illustre{
+                font-size: 10em;
+                text-align: center;
+            }
+        }
+        .contentfloat {
+            // width: 700px;
+            flex-basis: 65%;
+            // background-color: $white;
+            padding: 1em;
+            border-radius: 10px;
+
+            form {
+                width: 100%;
+                background-color: $white;
+                padding: 1em;
+                border-radius: 1em;
+                margin-bottom: 1em;
+                .card{
+                    width: 100%;
+
+                    .profile{
+                    margin: 0 auto;
+                        width: 200px;
+                        height: 200px;
+                        position: relative;
+                        border-radius: 50%;
+                        background-color: red;
+                        .take{
+                            position: absolute;
+                            bottom: 0;
+                            right: 10%;
+                            width: 50px;
+                            height: 50px;
+                            background-color: $treeth;
+                            border-radius: 50%;
+                            line-height: 50px;
+                            text-align: center;
+                            font-size: 1.5em;
+                            background-color: $secondary;
+                            color: $white;
+                            cursor: pointer;
+                        }
+                        img{
+                        border-radius: 50%;
+                        width: 200px;
+                        height: 200px;
+                        border: 5px solid $secondary;
+                        }
+                    }
+                }
+                .row{
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    gap: 10px;
+                }
+                .groupeForm {
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 1em;
+                    flex-direction: column;
+                    width: 100%;
+                    label {
+                        width: max-content;
+                        font-size: 14px;
+                        // width: 100%;
+                    }
+                    select,input {
+                        padding: 10px 20px;
+                        width: 100%;
+                        border: 1px solid #6c6b6b;
+                        border-radius: 0.8em;
+
+                        &:focus{
+                        outline: 2px solid $accent;
+                        }
+                    }
+                }
+
+                .groupebtn {
+                    width: 100%;
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+                    // gap: 100px;
+                    // margin-top: 1.3em;
+                    button {
+                        padding: 1em 2em;
+                        font-size: 1em;
+                        background-color: $accent;
+                        border: none;
+                        color: $white;
+                        border-radius: 1em;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .table{
+            width: 100%;
+            background-color: $white;
+            padding: 1em;
+            border-radius: 1em;
+            margin-bottom: 1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            // justify-content: space-between;
+            // table-layout: fixed;
+            tbody {
+                tr {
+                    cursor: pointer;
+                    border-bottom: 1px solid $gray;
+                    width: 100%;
+
+                    &:hover {
+                        // background: $light_second;
+                    }
+
+                    td {
+                        padding: 16px 0;
+                        font-size: 14px;
+                        text-transform: lowercase;
+                        text-align: left;
+                        // color: $second_gray;
+                        font-weight: 300;
+                        // width: max-content;
+                        // text-overflow: ellipsis;
+                        // overflow: hidden;
+                        // text-wrap: nowrap;
+                        // width:calc(100% / 5);
+
+                        &.action{
+                            display:inline-flex;
+                            align-items: center;
+                            gap: 10px;
+                            width: 100%;
+                            // width: max-content;
+                            span{
+                                 a{
+                                    color: $white;
+                                 }
+                                cursor: pointer;
+                                padding: 5px;
+                                background-color: $accent;
+                                color: $white;
+                                border-radius: 6px;
+                                i{
+                                    font-size: 1em;
+                                }
+                            }
+                        }
+
+                        .commande {
+                            text-decoration: underline;
+                            // color: $black;
+                        }
+
+                        i {
+                            width: 20px;
+                            height: 20px;
+                            line-height: 40px;
+                            text-align: center;
+                            border-radius: 50%;
+                            font-weight: 900;
+                            font-size: 25px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            // color: $secondary;
+                            padding: 10px;
+                        }
+
+                    }
+                }
+
+            }
+
+            thead {
+                th {
+                    padding-bottom: 20px;
+                    font-size: 12px;
+                    text-align: left;
+                    color: $text_ligth;
+                    border-bottom: 1px solid $gray;
+                    // border-bottom: 1px solid $grey;
+                }
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import './variable.scss';
+
+.login {
+    width: 100%;
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .card{
+            width: 500px;
+            border-radius: 0.5em;
+            .logo{
+                max-width: 200px;
+                height: 100%;
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .link {
+            display: block;
+            text-align: center;
+            margin: 10px 0;
+
+            a {
+                color: blue;
+                text-decoration: underline;
+            }
+        }
+
+        .content {
+            padding: 1em;
+            border-radius: 13px;
+            .title{
+            color: $accent;
+            }
+
+            form {
+                width: 100%;
+                margin-top: 1em;
+                .grouperow {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                }
+
+                .groupeForm {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 1em;
+                flex-direction: column;
+                width: 100%;
+                label {
+                    width: max-content;
+                    font-size: 14px;
+                    // width: 100%;
+                }
+                select,input {
+                    padding: 15px 20px;
+                    width: 100%;
+                    border: 1px solid #6c6b6b;
+                    border-radius: 0.8em;
+
+                    &:focus{
+                    outline: 2px solid $accent;
+                    }
+                }
+                }
+                button {
+                    padding: 1em 2em;
+                    font-size: 1em;
+                    background-color: $accent;
+                    border: none;
+                    color: $white;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+}

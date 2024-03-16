@@ -1,7 +1,7 @@
 
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:500|Poppins:400');
-@import url('./layout.scss');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400|Poppins:400');
+@import url('./layoutAccount.scss');
 @import url('./home.scss');
 @import url('./dashboard.scss');
 @import url('./skipSingle.scss');
@@ -11,6 +11,7 @@
 @import url('./managecard.scss');
 @import url('./addCard.scss');
 @import url('./bulkList.scss');
+@import url('./auth.scss');
 *,::before,::after{
 
   text-decoration: none;
@@ -19,6 +20,7 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  scroll-behavior: smooth;
 }
 
 

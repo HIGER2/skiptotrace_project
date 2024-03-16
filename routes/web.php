@@ -93,6 +93,15 @@ Route::get('/add_card', function () {
     return view('pages.addCard');
 });
 
+Route::prefix('auth')->group(function () {
+    Route::get('/login', function () {
+        return view('pages.login');
+    });
+    Route::get('/register', function () {
+        return view('pages.register');
+    });
+});
+
 
 // Route::group()
 require __DIR__ . '/auth.php';

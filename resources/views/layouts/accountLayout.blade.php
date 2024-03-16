@@ -1,9 +1,12 @@
 @extends("layouts.appLayout")
 @section('content')
- <main>
+ <main class="main">
     <nav class="slidebar" ">
         <div class="header">
-            <img src="{{asset('/img/logo.png') }}" alt="">
+            <a href="/">
+             <img src="{{asset('/img/logo.png') }}" alt="">
+            </a>
+
         </div>
         <ul class="navItems">
             <li class="navItem active" >
